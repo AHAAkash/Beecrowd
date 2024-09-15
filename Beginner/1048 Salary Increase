@@ -1,0 +1,32 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double sal, new_salary, increase;
+    int percentage;
+
+    cin >> sal;
+
+    if (sal >= 0 && sal <= 400.00) {
+        percentage = 15;
+    } else if (sal >= 400.01 && sal <= 800.00) {
+        percentage = 12;
+    } else if (sal >= 800.01 && sal <= 1200.00) {
+        percentage = 10;
+    } else if (sal >= 1200.01 && sal <= 2000.00) {
+        percentage = 7;
+    } else {
+        percentage = 4;
+    }
+
+    increase = sal * percentage / 100;
+    new_salary = sal + increase;
+
+    cout << fixed << setprecision(2);
+    cout << "Novo salario: " << new_salary << endl;
+    cout << "Reajuste ganho: " << increase << endl;
+    cout << "Em percentual: " << percentage << " %" << endl;
+
+    return 0;
+}
