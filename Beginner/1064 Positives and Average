@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double num;
+    int positiveCount = 0;
+    double sum = 0.0;
+
+    for (int i = 0; i < 6; i++) {
+        cin >> num;
+        if (num > 0) {
+            positiveCount++;
+            sum += num;
+        }
+    }
+    double average = sum / positiveCount;
+    cout << positiveCount << " valores positivos" << endl;
+    cout << fixed << setprecision(1) << average << endl;
+
+    return 0;
+}
