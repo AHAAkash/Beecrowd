@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int x, y;
+    cin >> x >> y;  // Reading input values
+
+    double total;
+
+    if (x == 1) {
+        total = 4.0 * y;
+    } else if (x == 2) {
+        total = 4.5 * y;
+    } else if (x == 3) {
+        total = 5.0 * y;
+    } else if (x == 4) {
+        total = 2.0 * y;
+    } else if (x == 5) {
+        total = 1.5 * y;
+    } else {
+        cout << "Invalid product code" << endl;
+        return 1;
+    }
+
+    cout << fixed << setprecision(2);  // Setting the precision for output
+    cout << "Total: R$ " << total << endl;
+
+    return 0;
+}
