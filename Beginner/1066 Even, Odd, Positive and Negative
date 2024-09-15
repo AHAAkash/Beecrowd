@@ -2,14 +2,28 @@
 using namespace std;
 
 int main() {
-    int num, count = 0;
+    int num;
+    int count_even = 0, count_odd = 0, count_positive = 0, count_negative = 0;
+    for (int i = 0; i < 5; i++) {
+       cin >> num;
+        
+        if (num > 0) {
+            count_positive++;
+        } else if (num < 0) {
+            count_negative++;
+        }
 
-    for(int i = 0; i < 5; ++i) {
-        cin >> num;
         if (num % 2 == 0) {
-            count++;
+            count_even++;
+        } else {
+            count_odd++;
         }
     }
-    cout << count << " valores pares" << endl;
+
+    cout << count_even << " valor(es) par(es)" << endl;
+    cout << count_odd << " valor(es) impar(es)" << endl;
+    cout << count_positive << " valor(es) positivo(s)" << endl;
+    cout << count_negative << " valor(es) negativo(s)" << endl;
+
     return 0;
 }
