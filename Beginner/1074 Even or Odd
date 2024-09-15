@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t, num;
+    cin >> t;
+
+    while (t--) {
+        cin >> num;
+        
+        if (num == 0) {
+            cout << "NULL" << endl;
+        } else if (num > 0 && num % 2 == 0) {
+            cout << "EVEN POSITIVE" << endl;
+        } else if (num > 0 && num % 2 != 0) {
+            cout << "ODD POSITIVE" << endl;
+        } else if (num < 0 && num % 2 == 0) {
+            cout << "EVEN NEGATIVE" << endl;
+        } else if (num < 0 && num % 2 != 0) {
+            cout << "ODD NEGATIVE" << endl;
+        }
+    }
+
+    return 0;
+}
