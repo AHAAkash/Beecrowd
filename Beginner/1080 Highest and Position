@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int max_value = 0;
+    int max_pos = 0;
+    int cur_value;
+
+    for (int i = 1; i <= 100; ++i) {
+        cin >> cur_value;
+        if (cur_value > max_value) {
+            max_value = cur_value;
+            max_pos = i;
+        }
+    }
+
+    cout << max_value << endl;
+    cout << max_pos << endl;
+
+    return 0;
+}
